@@ -2,12 +2,13 @@
 
 :root {
   --primary-color: #212421;
+  color: #fff;
 }
 
 body {
   font-family: "Work Sans", sans-serif;
   text-align: center;
-  background-color: aquamarine;
+  background-color: rgb(3, 5, 4);
 }
 
 
@@ -29,6 +30,7 @@ header h1 {
   display: block;
   outline: #fff;
   padding: 1rem;
+  border-radius: 0.4rem;
   margin: 1rem auto;
   border: 2px solid var(--primary-color);
   width: 100%;
@@ -45,7 +47,7 @@ header h1 {
   cursor: pointer;
   outline: #fff;
   margin: auto;
-  display: block;
+  background-color: rgb(33, 5, 99);
   margin-bottom: 1rem;
 }
 
@@ -67,7 +69,7 @@ footer {
   }
   
   .footer-list {
-    margin: 1rem;
+    margin: auto;
   }
   
   a,
@@ -77,6 +79,6 @@ footer {
   }
   
   img {
-    width: 40px;
-    padding: 0.2rem;
+    width: 30px;
+    padding: 0.7rem;
   }
