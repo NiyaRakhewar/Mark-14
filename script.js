@@ -1,40 +1,36 @@
-var initialPrice = document.querySelector("#initial-price");
-var stockQuantity = document.querySelector("#stocks-quantity");
-var currentPrice = document.querySelector("#current-price");
-
-var submitBtn = document.querySelector("#submit-btn");
+var initialPrice = document.querySelector("#initial");
+var Quantity = document.querySelector("#quantity");
+var currentPrice = document.querySelector("#current");
+var submit = document.querySelector("#submit");
 var output = document.querySelector("#output");
 
-submitBtn.addEventListener('click', submitHandler);
+submit.addEventListener('click', submitHandler);
 
 function submitHandler(){
     var ip = Number(initialPrice.value);
-    var qty = Number(stockQuantity.value);
+    var qty = Number(Quantity.value);
     var cur = Number(currentPrice.value);
 
-    calculateProfitAndLoss(ip, qty, cur);
+    calculate(ip, qty, cur);
 }
 
-function calculateProfitAndLoss(initial, quantity, current){
+function calculate(initial, quantity, current){
     if(initial > current){
-        //loss
         var loss = (initial - current) * quantity;
-        var lossPercentage = (loss/initial) * 100;
+        var lossPer = (loss/initial) * 100;
 
-        showOutput('loss is ' + loss + ' and percentage '+ lossPercentage + ' %');
+        outputShow('loss is ' + loss + ' and percentage '+ lossPer + ' %');
     } else if(current > initial){
-        //profit
         var profit = (current - initial) * quantity;
-        var profitPercentage = (profit/initial) * 100;
+        var profitPer = (profit/initial) * 100;
 
-        showOutput('profit is ' + profit + ' and percentage '+ profitPercentage + ' %');
+        outputShow('profit is ' + profit + ' and percentage '+ profitPer + ' %');
 
     } else{
-        //rest
-        showOutput("No pain, No gain");
+        outputShow("No pain, No gain");
     }
 }
-function showOutput(message, status){
+function outputShow(message){
     output.innerHTML = message;
 }
 

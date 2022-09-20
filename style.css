@@ -37,7 +37,7 @@ header h1 {
   max-width: 325px;
 }
 
-.btn-check {
+.btn {
   background: var(--primary-color);
   border: none;
   color: #fff;
